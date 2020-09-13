@@ -20,7 +20,7 @@ public class _01_RobotRace {
 		for (int i = 0; i < robotArray.length; i++) {
 			robotArray[i] = new Robot();
 			int startingPosition = 100 * i + 50;
-			robotArray[i].moveTo(startingPosition, 400);
+			robotArray[i].moveTo(startingPosition, 600);
 			robotArray[i].setSpeed(200);
 			robotArray[i].miniaturize();
 			robotArray[i].penDown();
@@ -31,7 +31,7 @@ public class _01_RobotRace {
 		// a random amount less than 50.
 		while (win == false) {
 			for (int g = 0; g < robotArray.length; g++) {
-				if (run==true && robotArray[g].getY() <= 400) {
+				if (robotArray[g].getY() <= 100) {
 					win = true;
 					System.out.println("win");
 					g += 1;
@@ -51,7 +51,7 @@ public class _01_RobotRace {
 					distance = 6;
 				}
 				robotArray[g].move(distance);
-				robotArray[g].turn((int) (distance / 2));
+				//robotArray[g].turn((int) (distance / 2));
 				robotsRan+=1;
 				if(robotsRan>=600) {
 					run=true;
